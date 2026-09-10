@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0d1117">
+    <title>GitHub Copilot Launch Lab</title>
+    <link rel="icon" href="./github-mark.svg" type="image/svg+xml">
+    <link rel="preload" href="./mona-sans.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to mission</a>
+    <div id="app"><div class="loading"><img class="brand-symbol" src="./github-mark.svg" alt="GitHub" width="40" height="40"><h1>Opening GitHub Copilot Launch Lab...</h1><p>Loading missions and saved progress.</p></div></div>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <dialog id="workspace-dialog" aria-labelledby="workspace-title">
+        <form id="workspace-form">
+            <div class="dialog-head"><span class="eyebrow">YOUR LEARNING SPACE</span><button type="button" class="icon-button" data-close aria-label="Close workspace settings">X</button></div>
+            <h2 id="workspace-title">One project. Every artifact.</h2>
+            <p>Add your local folder through Copilot App first, then enter its exact project name here. This setting does not create a folder or change the app's current project.</p>
+            <label for="workspace-name">Learner project name</label>
+            <input id="workspace-name" name="workspace" maxlength="250" placeholder="product-launch-readiness" autocomplete="off">
+            <p class="hint">Keep using the same local project/session so later missions can find earlier outputs.</p>
+            <label for="learner-role">Your role</label>
+            <select id="learner-role" name="role">
+                <option>Project manager</option>
+                <option>Operations leader</option>
+                <option>Product manager</option>
+                <option>Executive or sponsor</option>
+                <option>Marketing or communications</option>
+                <option>Technical lead</option>
+            </select>
+            <fieldset class="feature-readiness">
+                <legend>What is available in your Copilot App?</legend>
+                <p class="hint">Choose Not sure when you do not know. The lab will keep the safe fallback visible.</p>
+                <label>Automations<select name="automations"><option value="unknown">Not sure</option><option value="available">Available</option><option value="unavailable">Not available</option></select></label>
+                <label>GitHub repository with write access<select name="github"><option value="unknown">Not sure</option><option value="available">Available</option><option value="unavailable">Not available</option></select></label>
+                <label>Canvas creation<select name="canvas"><option value="unknown">Not sure</option><option value="available">Available</option><option value="unavailable">Not available</option></select></label>
+                <label>Cloud agent automation<select name="cloud"><option value="unknown">Not sure</option><option value="available">Available</option><option value="unavailable">Not available</option></select></label>
+            </fieldset>
+            <label for="scenario-notes">Your launch scenario</label>
+            <textarea id="scenario-notes" name="notes" rows="12" maxlength="50000" required></textarea>
+            <p class="hint">Pulse Analytics is fictional. Replace these notes to use your own scenario; follow your organization's data policies. Prompts will send these notes to Copilot only when you choose to.</p>
+            <div class="dialog-footer"><button type="button" class="button secondary" data-close>Cancel</button><button class="button primary" type="submit">Save workspace</button></div>
+        </form>
+    </dialog>
+    <dialog id="send-dialog" aria-labelledby="send-title">
+        <div class="dialog-head"><span class="eyebrow">REAL WORK, NOT A SIMULATION</span><button class="icon-button" data-close aria-label="Close handoff">X</button></div>
+        <h2 id="send-title">Hand this task to Copilot?</h2>
+        <div id="send-summary"></div>
+        <p id="send-detail">The request goes to the conversation hosting this canvas. It may need your input.</p>
+        <div class="callout">Mode and model are recommendations, not automatically changed settings. Sending a prompt does not complete a checkpoint.</div>
+        <div class="dialog-footer"><button class="button secondary" data-close>Keep learning</button><button id="confirm-send" class="button primary">Send to Copilot</button></div>
+    </dialog>
+    <div id="phase-celebration" class="phase-celebration" role="status" aria-live="polite" hidden>
+        <div class="phase-celebration-mark" aria-hidden="true">✓</div>
+        <div><span id="phase-celebration-kicker">Phase complete</span><strong id="phase-celebration-title"></strong><p id="phase-celebration-copy"></p></div>
+    </div>
+</body>
+</html>
