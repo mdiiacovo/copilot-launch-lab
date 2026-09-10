@@ -68,4 +68,4 @@ This experience adapts the original Copilot Academy lab:
 
 <https://copilot-academy.github.io/labs/getting-work-done-with-copilot-app>
 
-The repository is licensed under the [MIT License](LICENSE). Bundled GitHub Octicons and Mona Sans assets retain their original licenses and attribution in [THIRD-PARTY-NOTICES.txt](.github/extensions/copilot-launch-lab/THIRD-PARTY-NOTICES.txt).
+The repository is licensed under the [MIT License](LICENSE). The lab uses an original rocket icon rather than GitHub or Copilot logos. The bundled Mona Sans font retains its original license and attribution in [THIRD-PARTY-NOTICES.txt](.github/extensions/copilot-launch-lab/THIRD-PARTY-NOTICES.txt).

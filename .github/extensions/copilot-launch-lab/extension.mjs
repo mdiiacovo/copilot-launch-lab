@@ -122,8 +122,7 @@ async function startServer(instanceId) {
                     "": ["index.html", "text/html"],
                     "app.js": ["app.js", "text/javascript"],
                     "styles.css": ["styles.css", "text/css"],
-                    "github-mark.svg": ["github-mark.svg", "image/svg+xml"],
-                    "copilot.svg": ["copilot.svg", "image/svg+xml"],
+                    "rocket.svg": ["rocket.svg", "image/svg+xml"],
                     "mona-sans.ttf": ["mona-sans.ttf", "font/ttf"],
                 };
                 const asset = Object.hasOwn(assets, path) ? assets[path] : null;
@@ -168,7 +167,7 @@ session = await joinSession({
     canvases: [createCanvas({
         id: "copilot-launch-lab",
         displayName: "GitHub Copilot Launch Lab",
-        description: "A GitHub-branded hands-on lab for learning Copilot App through a launch-readiness project, with 12 guided missions, real-work prompts, saved checkpoints, and artifact tracking.",
+        description: "A rocket-themed hands-on lab for learning Copilot App through a launch-readiness project, with 12 guided missions, real-work prompts, saved checkpoints, and artifact tracking.",
         inputSchema: objectSchema({ missionId }, []),
         actions: [
             {
