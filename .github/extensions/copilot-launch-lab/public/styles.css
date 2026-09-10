@@ -58,7 +58,7 @@ small, .hint { font-size: 12px; line-height: 1.6; color: var(--fg-muted); }
 .layout { display: grid; grid-template-columns: 256px minmax(0, 1fr); min-height: 100vh; }
 .sidebar { padding: 27px 16px 22px; background: var(--bg-inset); border-right: 1px solid var(--border-default); display: flex; flex-direction: column; }
 .brand { display: flex; align-items: center; gap: 12px; margin: 0 12px 26px; }
-.brand-symbol, .copilot-mini, .copilot-emblem img { filter: invert(1); flex-shrink: 0; display: block; }
+.brand-symbol, .launch-icon, .rocket-emblem img { flex-shrink: 0; display: block; }
 .brand-symbol { width: 36px; height: 36px; }
 .brand strong { font-size: 24px; font-weight: 750; line-height: 1.15; letter-spacing: -.9px; display: block; }
 .brand small { display: block; font-size: 11px; color: var(--fg-muted); margin-top: 4px; }
@@ -126,10 +126,10 @@ small, .hint { font-size: 12px; line-height: 1.6; color: var(--fg-muted); }
 .hero-facts strong { font-weight: 600; color: var(--fg-default); }
 .hero-facts span + span::before { content: ""; height: 3px; width: 3px; background: #484f58; border-radius: 50%; margin-right: 14px; }
 .hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 230px; background: radial-gradient(#30363d99 .6px, transparent .7px); background-size: 14px 14px; }
-.copilot-orbit { width: 178px; height: 178px; border: 1px solid #3fb95033; border-radius: 50%; display: grid; place-items: center; position: relative; background: radial-gradient(circle, #23863622, transparent 70%); }
-.copilot-orbit::before { position: absolute; content: ""; inset: 16px; border: 1px solid #3fb95026; border-radius: 50%; }
-.copilot-emblem { position: relative; display: grid; place-items: center; width: 100px; height: 100px; border: 1px solid #484f58; border-radius: 24px; background: linear-gradient(150deg, #21262d, #0d1117); box-shadow: 0 0 38px #3fb95014, 0 12px 30px #01040966; }
-.copilot-emblem img { width: 64px; height: 64px; }
+.rocket-orbit { width: 178px; height: 178px; border: 1px solid #3fb95033; border-radius: 50%; display: grid; place-items: center; position: relative; background: radial-gradient(circle, #23863622, transparent 70%); }
+.rocket-orbit::before { position: absolute; content: ""; inset: 16px; border: 1px solid #3fb95026; border-radius: 50%; }
+.rocket-emblem { position: relative; display: grid; place-items: center; width: 100px; height: 100px; border: 1px solid #484f58; border-radius: 24px; background: linear-gradient(150deg, #21262d, #0d1117); box-shadow: 0 0 38px #3fb95014, 0 12px 30px #01040966; }
+.rocket-emblem img { width: 64px; height: 64px; }
 .orbit-point { width: 7px; height: 7px; border: 1px solid #3fb950; border-radius: 50%; position: absolute; background: var(--bg-default); }
 .point-one { top: 18px; right: 26px; }
 .point-two { bottom: 26px; left: 16px; background: var(--success); }
